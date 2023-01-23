@@ -1,5 +1,5 @@
 # JavaScript Data 202 
-## The syntax to read data depends on the data type or the data collection in which data types are found
+## The syntax to read data depends on the data types or the data collections in which data types are found
 
 ### arrays 
 We use an index to read data from an array by enclosing the index value within square brackets. 
@@ -35,6 +35,7 @@ console.log(car['mileage']) // --> 34521
 console.log(car.mileage) // --> 34521
 
 ```
+you can change value in a dot notation like (car.color ='gold'; )
 
 ## string, booleans and numbers 
 
