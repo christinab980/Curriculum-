@@ -1,3 +1,5 @@
+// JavaScript Arrays and Objects: 8
+ 
 const budget = [
     {
         name: 'keyboard',
