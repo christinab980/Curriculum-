@@ -8,4 +8,9 @@ colon
 curly braces
 dev tools 
 id attribute 
-`` tag, and its attributes href and `rel` 
+`link` tag, and its attributes href and `rel` 
+selector
+semi-colon
+style rules
+stylesheet
+universal selector
