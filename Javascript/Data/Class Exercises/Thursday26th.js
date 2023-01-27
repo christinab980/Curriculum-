@@ -72,3 +72,8 @@ const months = [
         monthDaysCount: 31,
     },
 ];
+
+console.log(months)
+console.log(months[8].monthDaysCount)
+console.log(months[1].monthAbbreviation)
+console.log(months[3].monthName)
