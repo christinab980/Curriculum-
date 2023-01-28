@@ -8,10 +8,10 @@ following the casacading flow of the page
 The block-size CSS property defines the horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the width or the height property, depending on the value of writing-mode.
 
 **Inline // Inline Block**
-appear on the same line or next to each out. Example an anchor link. 
+appear on the same line or next to each out. Example an anchor link. An inline block ocupies the space within the line of code and when there are next to each other they are truely next to each other. 
 
 **Flow**
-the way that Block and Inline elements are displayed on a page before any changes are made to their layout. 
+the way that Block and Inline elements are displayed on a page before any changes are made to their layout. Flow starts on the top left. 
 
 **Position**
 The position CSS property sets how an element is positioned in a document. The top , right , bottom , and left properties determine the final location of positioned elements.
