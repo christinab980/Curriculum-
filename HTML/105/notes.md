@@ -1,5 +1,5 @@
 # HTMl 105 
-## Learn about the elements that are specifically designed to load data from somewhere else via network requests 
+## Learn about the elements that are specifically designed to loaded data from somewhere else via network requests 
 
 **images**
 
