@@ -4,6 +4,6 @@
 | Assignment | Grade |
 |------------|:-----:| 
 |Sum two Numbers | 7.5 |
-|Custom Greeting | 
-|Area of Perimeter|
-|Student's Final Grade |
+|Custom Greeting | 7.5 |
+|Area of Perimeter| 7 |
+|Student's Final Grade | 7|
