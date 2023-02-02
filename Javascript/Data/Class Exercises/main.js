@@ -39,3 +39,16 @@ const finalGrade = function (exam, projects) {
         return 0
 };
 
+const feast = (beast, dish) =>
+beast[0] == dish[0] && beast [beast.length -1] == dish [dish.length -1]
+
+function points(games) {
+    return games
+    .map(game => {
+        const [x, y] = game.split(':').map(s => parseInt(s))
+        if (x > y) return 3;
+        if (x < y) return 0;
+        return 1;
+    })
+    .reduce((total, currentValue) => total + currentValue)
+}
