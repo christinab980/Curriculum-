@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:wght@300;400&display=swap');
 
-* {
+.wrap {
   width: 375px;
 }
 
@@ -21,6 +21,7 @@ nav {
 }
 
 .navs {
+    display: inline-block;
     padding: 22px 0;
     text-align: right;
 }
@@ -79,6 +80,9 @@ ul {
 .news {
     padding: .5rem;
     
+}
+.news li {
+  position: relative;
 }
 
 .news li:before {
