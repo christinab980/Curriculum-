@@ -94,8 +94,19 @@ main {
     text-align: center;
 }
 
-.tv {
+.tv, .movies {
     display: inline-block;
     height: 250px;
-    text-align: center;
+}
+
+.hits {
+    display: block;
+    height: 200px;
+    width: 200px;
+    padding: 5px;
+    margin: 0 0 0 60px;
+}
+
+.music-info {
+    display: inline-block;
 }
