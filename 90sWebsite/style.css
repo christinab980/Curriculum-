@@ -84,9 +84,18 @@ font-size: 70px;
 
 p {
     color:white;
-    padding: 100px;
+    padding: 60px;
     line-height: 1.5;
     position: absolute;
     display: block;
     top: 70%;
+}
+main {
+    text-align: center;
+}
+
+.tv {
+    display: inline-block;
+    height: 250px;
+    text-align: center;
 }
