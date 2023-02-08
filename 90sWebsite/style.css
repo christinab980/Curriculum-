@@ -59,7 +59,7 @@ background-clip: border-box;
 background-size: 200% auto;
 color: #fff;
 background-clip: text;
-text-fill-color: transparent;
+-webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 6s linear infinite;
