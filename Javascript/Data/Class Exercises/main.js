@@ -52,3 +52,4 @@ function points(games) {
     })
     .reduce((total, currentValue) => total + currentValue)
 }
+
