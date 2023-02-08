@@ -72,23 +72,16 @@ font-size: 70px;
     }
 }
 .square {
-    position: relative;
-}
-#floppy {
-    position: absolute;
-    display: block;
-    height: 100px;
-    width: 100px;
-    color: white;
+    background-color:black;
+    height: 200px;
+    width: 100%;
 }
 
 p {
     color:white;
     padding: 60px;
     line-height: 1.5;
-    position: absolute;
     display: block;
-    top: 70%;
 }
 main {
     text-align: center;
@@ -105,8 +98,8 @@ main {
     width: 200px;
     padding: 5px;
     margin: 0 0 0 60px;
-}
+} 
 
-.music-info {
-    display: inline-block;
+.song {
+    display: flex;
 }
