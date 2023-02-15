@@ -61,7 +61,7 @@ main {
 }
 
 .flex-item_double_article {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
