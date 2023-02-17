@@ -9,7 +9,9 @@
 | Flexbox Froggy | 7.5 |
 | Flexbox Layout 1 | 7 |
 | Flexbox Layout 2 | 7.5 |
-| Flexbox Layout 3 | 7.6 |
+| Flexbox Layout 3 | 7.5 |
 | Flexbox Layout 4 | 7.5 |
 | Century From Year | |
 | Cat Years, Dog Years | |
+| Flexbox Layout 5 | 7 |
+| Flexbox Layout 6 | 8 |
