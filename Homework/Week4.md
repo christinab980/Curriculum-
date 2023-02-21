@@ -22,4 +22,4 @@
 | Flexbox Layout 12 | 7 |
 | Cards 1 | 7 |
 | Toggle 1 | 6.5 |
-| Quiz 1 | |
+| Quiz 1 | 5 |
