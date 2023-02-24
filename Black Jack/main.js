@@ -11,7 +11,7 @@ const createCard = (rank, suit) => {
     pointValue: rank > 10 ? 10 : rank,
   };
   return card;
-}
+};
 
 function buildDeck () {
     const deck = [];  
@@ -25,7 +25,7 @@ function buildDeck () {
         }
     }    
     return deck;
-}
+};
 
 window.addEventListener("DOMContentLoaded", () => {
   // Execute after page load
