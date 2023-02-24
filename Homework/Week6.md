@@ -3,4 +3,5 @@
 
 | Assignment | Grade |
 |------------|:-----:| 
-| Progress tracker |  |
+| Progress tracker | 6 |
+| Black Jack | | 
