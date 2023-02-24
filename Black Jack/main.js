@@ -34,17 +34,19 @@ window.addEventListener("DOMContentLoaded", () => {
 function hand () {
     for (let i =1; i <=2; i++) {
         const card = document.createElement("img");
-        card.src = "https://raw.githubusercontent.com/samuraijane/js-hw-blackjack-exercise/main/images/10_of_clubs.png"
-        card.id = "card";
-        dealerHand.append(card);
+        const card2 = document.createElement("img");
+        //card.src = "https://raw.githubusercontent.com/samuraijane/js-hw-blackjack-exercise/main/images/10_of_clubs.png"
+        //card2.src = 
+        //card.id = "card";
+        //dealerHand.append(card);
     }
 };
 
 function playersHand () {
     for (let i =1; i <=2; i++) {
         const card = document.createElement("img");
-        card.src = "https://raw.githubusercontent.com/samuraijane/js-hw-blackjack-exercise/main/images/10_of_clubs.png"
-        card.id = "card";
+        //card.src = "https://raw.githubusercontent.com/samuraijane/js-hw-blackjack-exercise/main/images/10_of_clubs.png"
+        //card.id = "card";
         playerHand.append(card);
     }
 };
