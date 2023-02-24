@@ -8,29 +8,30 @@
     <title>Black Jack Project</title>
 </head>
 <body>
+    <div class="message-box" id="messages"></div>
     <div class="table">
-        <div class="message-box"></div>
-        <div class="dealer-wrap">
-            <div class="dealer"> Dealer</div>
-            <div class="points"></div>
-            <div class="hand">
-                <img src="" alt="">
-            </div>
+      <div class="player">
+        <label class="player-name">Dealer: <span id="dealer-points" class="points"></span>
+        </label>
+        <div id="dealer-hand" class="hand">
+          <!-- Dealer Hand -->
+          <img src="" alt="">
         </div>
-        <div class="player-wrap">
-             <div class="player"> Player </div>
-             <div class="player-name"></div>
-             <div class="points"></div>
-             <div class="hand">
-                <img src="" alt="">
-             </div>
-         </div>
-        <div class="buttons">
-            <button class="deal"> Deal </button>
-            <button class="hit"> Hit </button>
-            <button class="stand"> Stand </button>
+      </div>
+      <div class="player">
+        <label class="player-name">Player: <span id="player-points" class="points"></span>
+        </label>
+        <div id="player-hand" class="hand">
+          <!-- Player Hand -->
         </div>
+      </div>
+      <div class="buttons">
+        <button id="deal-button" type="button">Deal</button>
+        <button id="hit-button" type="button">Hit</button>
+        <button id="stand-button" type="button">Stand</button>
+      </div>
     </div>
-</body>
+  </body>
+
 <script src="main.js"></script>
 </html>
