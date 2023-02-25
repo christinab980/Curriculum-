@@ -37,8 +37,9 @@ function buildDeck () {
         const suit = suits[i]
         for (let rank = 1; rank<=13; rank++) {
             const card = {
-                rank: rank,
-                suit: suit,
+                rank,
+                suit,
+                //pointvalue: rank > 10 ? 10 : rank
             }
             deck.push(card)
         }
@@ -66,40 +67,22 @@ function deal (deck, target) {
     target.push(currentCard)
 };
 
-// window.addEventListener("DOMContentLoaded", () => {
-//   // Execute after page load
-// });
+function shuffleDeck (deck) {
+    for (let i=0; i < deck.length; i++) {
+        let shuffle = Math.floor(Math.random()* (deck.length));
+        let temp = deck[i];
+        deck[i] = deck[shuffle];
+        deck[shuffle] = temp;
+    }
+}
 
-// function hand () {
-//     for (let i =1; i <=2; i++) {
-//         const card = document.createElement("img");
-//         card.src = "https://raw.githubusercontent.com/samuraijane/js-hw-blackjack-exercise/main/images/10_of_clubs.png"
-//         card.id = "card";
-//         dealerHand.append(card);
-//     }
-// };
+function hitMe () {
+  for (let i=0; i<1; i++) {
+    renderCard(deck.pop(card), pla)
+  }
+}
 
-// function playersHand () {
-//     for (let i =1; i <=2; i++) {
-//         const card = document.createElement("img");
-//         card.src = "https://raw.githubusercontent.com/samuraijane/js-hw-blackjack-exercise/main/images/10_of_clubs.png"
-//         card.id = "card";
-//         playerHand.append(card);
-//     }
-// };
-
-// function hitMe () {
-//     for (let i=1; i<=1; i++) {
-//         const card = document.createElement("img");
-//         card.src = "https://raw.githubusercontent.com/samuraijane/js-hw-blackjack-exercise/main/images/10_of_clubs.png"
-//         card.id = "card";
-//         playerHand.append(card);
-//     }
-// };
-
-// dealButton.addEventListener('click', hand);
-// dealButton.addEventListener('click', playersHand);
-// hitButton.addEventListener('click', hitMe);
+shuffleDeck(gameDeck);
 
 dealButton.addEventListener('click', function(){
     deal(gameDeck, pHand) 
@@ -108,3 +91,5 @@ dealButton.addEventListener('click', function(){
     deal(gameDeck, dHand)  
     displayGame()
 })
+
+hitButton.addEventListener('click', hitMe)
