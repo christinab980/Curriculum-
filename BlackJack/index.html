@@ -9,17 +9,22 @@
     <script src="/BlackJack/main.js"> </script>
 </head>
 <body>
-    <h2> Dealer: <span id="dealer-sum"></span> </h2>
-    <div id="dealer-cards" class="dealer-cards"> 
-          <img id='hidden' src="/BlackJack/Deck/BACK.png" alt="">
-    </div>
-    <h2> Player: <span id="your-sum"> </span></h2>
-    <div id="your-cards" class="your-cards"> </div>
-    <div>
-        <button class="hit" id="hit">Hit</button>
-        <button class="stay" id="stay">Stay</button>
+    <div class="container">
+        <h2> Dealer: <span id="dealer-sum"></span> </h2>
+        <div class="dealers-table">
+            <div id="dealer-cards" class="dealer-cards"> 
+                <img id='hidden' src="/BlackJack/Deck/BACK.png" alt="">
+            </div>
+        </div>
+        <h2> Player: <span id="your-sum"> </span></h2>
+            <div class="players-table">
+        <div id="your-cards" class="your-cards"> </div>
+        </div>
+        <div class="buttons">
+            <button class="hit" id="hit">Hit</button>
+            <button class="stay" id="stay">Stay</button>
+        </div>
         <p id="results"> </p>
     </div>
-
 </body>
 </html>
