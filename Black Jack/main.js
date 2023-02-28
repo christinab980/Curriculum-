@@ -78,6 +78,14 @@ const displayGame = () => {
     }
 };
 
+// const hiddenCard = () => {
+//         if (dHand.length > 1 ) {
+//             const hidden = dealerHand.querySelector('[data-cardId="dealer-1"]');
+//             hidden.classlist.add('hidden-card')
+//     }
+
+//}
+
 // function firstDeal () {
 //     let recipient = 'player'
 //     for (let i =0; i < 4; i++ ) {
@@ -108,7 +116,6 @@ function shuffleDeck (deck) {
 //     hidden = deck.pop();
 //     dealersSum += getValue(hidden);
 //     dealerAceCount += checkAce(hidden);
-
 //     while (dealerSum < 17) {
 //         let cardImage = document.createElement("img");
 //         let card = deck.pop;
@@ -117,7 +124,6 @@ function shuffleDeck (deck) {
 //         dealerAceCount += checkAce(card);
 //         document.getElementById('dealer-hand').append(cardImage)
 //     }
-
 //     for (let i=0; i < 2; i++) {
 //         let cardImage = document.createElement("img");
 //         let card = deck.pop;
@@ -196,4 +202,4 @@ dealButton.addEventListener('click', function(){
 })
 
 hitButton.addEventListener('click', hitMe)
-standButton.addEventListener('click', standByMe)
+// standButton.addEventListener('click', standByMe)

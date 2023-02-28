@@ -57,6 +57,10 @@ body {
     width: auto;
     padding: 10px 0 10px 10px;
   }
+
+  .hidden-card {
+    background-image: url("./images/0_of_cover"):
+  }
   
   .buttons {
     display: flex;
