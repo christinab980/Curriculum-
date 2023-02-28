@@ -44,7 +44,8 @@ button {
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-align: center;
-    filter: drop-shadow(5px 5px 28px white)
+    filter: drop-shadow(5px 5px 28px white);
+    font-weight:bold;
 }
