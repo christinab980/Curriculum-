@@ -9,22 +9,6 @@ let gameDeck = buildDeck();
 let pHand = [];
 let dHand = [];
 
-// let dealersSum = 0;
-// let yourSum = 0;
-
-// let dealerAceCount = 0;
-// let yourAceCount = 0;
-
-// let hidden;
-// let deck;
-// let canHit = true;
-
-// window.onload = () => {
-//     buildDeck();
-//     shuffleDeck();
-//     startGame();
-// }
-
 const getCardImage = (card) => {
     const cardImage = document.createElement("img");
     if (card.rank === 1) {
@@ -78,25 +62,6 @@ const displayGame = () => {
     }
 };
 
-// const hiddenCard = () => {
-//         if (dHand.length > 1 ) {
-//             const hidden = dealerHand.querySelector('[data-cardId="dealer-1"]');
-//             hidden.classlist.add('hidden-card')
-//     }
-
-//}
-
-// function firstDeal () {
-//     let recipient = 'player'
-//     for (let i =0; i < 4; i++ ) {
-//     displayGame(deck.pop(), recipient);
-//     if (recipient === 'player') {
-//         recipient = 'dealer';
-//     } else {
-//         recipient = 'player'
-//     }
-// }
-// }
 
 function deal (deck, target) {
     const currentCard = deck.pop()
@@ -112,28 +77,6 @@ function shuffleDeck (deck) {
     }
 }
 
-// function startGame() {
-//     hidden = deck.pop();
-//     dealersSum += getValue(hidden);
-//     dealerAceCount += checkAce(hidden);
-//     while (dealerSum < 17) {
-//         let cardImage = document.createElement("img");
-//         let card = deck.pop;
-//         cardImage.scr ="./images/" + card + ".png";
-//         dealersSum += getValue(card);
-//         dealerAceCount += checkAce(card);
-//         document.getElementById('dealer-hand').append(cardImage)
-//     }
-//     for (let i=0; i < 2; i++) {
-//         let cardImage = document.createElement("img");
-//         let card = deck.pop;
-//         cardImage.scr ="./images/" + card + ".png";
-//         yourSum += getValue(card);
-//         yourAceCount += checkAce(card);
-//         document.getElementById('player-hand').append(cardImage)
-//     }
-// }
-
 function hitMe () {
   for (let i=0; i<1; i++) {
     const newCard = gameDeck[i]
@@ -142,54 +85,6 @@ function hitMe () {
   }
 }
 
-// function standByMe () {
-//     dealerSum = reduceAceCount(dealerSum, dealerAceCount);
-//     yourSum = reduceAce(yourSum, yourAceCount);
-
-//     hitMe = false;
-    
-//     let message = " " 
-//     if (yourSum > 21) {
-//         message = "You Lose!";
-//     } else if (dealerSum > 21) {
-//         message = "You Win";
-//     } else if (yourSum == dealerSum) {
-//         message = "Tie";
-//     } else if (yourSum < dealerSum) {
-//         message = "You Lose!";
-//     }
-//     document.getElementById('dealer-points').innerText = dealerSum;
-//     document.getElementById('player-points').innerText = yourSum
-//     document.getElementById('result').innerText = message;
-// };
-
-// function getValue (card) {
-//     let data = card.split('_');
-//     let value = data[0];
-
-//     if (isNaN(value)) {
-//         if (value == 'ace') {
-//             return 11;
-//         } 
-//         return 10;
-//     }
-//     return parseInt(value);
-// }
-
-// function checkAce (card) {
-//     if (card[0] == "Ace") {
-//         return = 1;
-//     } 
-//     return 0;
-// }
-
-// function reduceAce(playerSum, playerAceCount) {
-//     while(playerSum > 21 && playerAceCount > 0) {
-//         playerSum -= 10;
-//         playerAceCount -= 1;
-//     }
-//     return playerSum
-// }
 
 shuffleDeck(gameDeck);
 
