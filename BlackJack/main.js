@@ -1,3 +1,4 @@
+const dealButton = document.getElementById('deal');
 let dealerSum = 0;
 let yourSum = 0;
 
@@ -12,8 +13,12 @@ let canHit = true;
 window.onload = function () {
     buildDeck();
     shuffleDeck();
-    startGame();
 }
+
+dealButton.addEventListener("click", function(){
+    startGame();
+    }
+)
 
 function buildDeck () {
     let values = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
@@ -40,8 +45,6 @@ function startGame() {
     hidden = deck.pop();
     dealerSum += getValue(hidden); 
     dealerAceCount += checkAce(hidden);
-    // console.log(hidden);
-    // console.log(dealerSum)
 
     while (dealerSum < 17) {
         let cardImg = document.createElement("img");
@@ -91,6 +94,7 @@ function stay() {
     yourSum = reduceAce(yourSum, yourAceCount);
 
     canHit = false;
+    document.getElementById("deal").disabled = true;
     document.getElementById('hidden').src = "./deck/" + hidden + ".png";
 
     let message = " "
