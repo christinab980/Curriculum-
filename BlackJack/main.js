@@ -68,7 +68,6 @@ function startGame() {
 
     document.getElementById('hit').addEventListener("click", hit);
     document.getElementById('stay').addEventListener("click", stay);  
-    // document.getElementById("play-again").addEventListener("cliek", playAgain);
 }
 
 function hit() {
