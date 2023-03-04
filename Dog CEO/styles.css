@@ -1,0 +1,37 @@
+.container {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  
+  
+  button {
+    height: 50px;
+    width: 100px;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: lavender;
+    color: blueviolet;
+    border: 0;
+  }
+  
+  button:hover {
+    background-color: blueviolet;
+    color: lavender;
+  }
+
+  img {
+    height: 200px;
+    width: 250px;
+  }
+
+  /* .output {
+  height: auto;
+  width: auto;
+  background-color: lavender;
+  padding: 10px;
+  } */
