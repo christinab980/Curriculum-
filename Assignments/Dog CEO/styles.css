@@ -7,6 +7,9 @@ header, footer {
   padding: 20px;
 }
 
+footer {
+  margin-top: 50px;
+}
 body, html {
   height: 100%;
 }
@@ -62,4 +65,17 @@ body, html {
   .question div {
     margin-top: 20px;
     text-align: center;
+  }
+
+  .output img {
+    border: 5px solid blueviolet;
+    border-radius: 20px;
+  }
+
+  .output img:hover {
+    border: 5px solid palevioletred;
+  }
+
+  .wrap {
+  padding: 30px;
   }

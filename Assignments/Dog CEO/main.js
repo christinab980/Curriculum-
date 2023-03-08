@@ -1,10 +1,12 @@
 const button = document.getElementById('dogButton');
 const output = document.getElementById('output');
 const thePrompt = document.getElementById('question');
+const yourScore = document.getElementById('your-score')
 const fetchUrl = "https://dog.ceo/api/breeds/image/random"
 
 let breeds = [];
 let answer = '';
+let finalResult = [];
 
 output.addEventListener('click', handleSelection)
 
@@ -38,9 +40,18 @@ function handleSelection(e) {
   const breed = e.target.getAttribute('data-breed');
   if (breed) {
     giveFeedback(breed === answer)
-
   }
+}
 
+function score() {
+  if (giveFeedback(answer === 'CORRECT')) {
+    let result = + 1;
+    score.innerText = `Your score is ${result} out of 5`
+  } else {
+    let result = 0;
+    score.innerText = `Your score is ${result} out of 5`
+  }
+  finalResult.push(results)
 }
 
 function setRandomAnswer() {
