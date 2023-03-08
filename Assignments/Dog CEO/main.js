@@ -1,12 +1,15 @@
 const button = document.getElementById('dogButton');
 const output = document.getElementById('output');
 const thePrompt = document.getElementById('question');
-const yourScore = document.getElementById('your-score')
+const yourScore = document.getElementById('your-score');
 const fetchUrl = "https://dog.ceo/api/breeds/image/random"
+const tryAgain = document.getElementById('try-again');
 
+let canAnswer = true;
 let breeds = [];
 let answer = '';
 let finalResult = [];
+let score = 0;
 
 output.addEventListener('click', handleSelection)
 
@@ -22,6 +25,10 @@ const customPromise = async() => {
 //creating the image from the DOM to turn the API into an actual image
 const dogImg = async() => {
     output.innerHTML = '';
+    thePrompt.innerHTML = ''; 
+    breeds = [];
+    canAnswer = true;
+
     for(i = 0; i<4; i++) {
       const div = document.createElement('div');
       div.className = 'dog-img'
@@ -36,24 +43,28 @@ const dogImg = async() => {
   setRandomAnswer();
 }
 
+//eventlistener function - handles whether or not the user can answer and getting the correct anwswer 
 function handleSelection(e) {
-  const breed = e.target.getAttribute('data-breed');
+  if (canAnswer) {
+    canAnswer = false;
+    const breed = e.target.getAttribute('data-breed');
   if (breed) {
     giveFeedback(breed === answer)
-  }
+    }
+  } 
 }
 
-function score() {
-  if (giveFeedback(answer === 'CORRECT')) {
-    let result = + 1;
-    score.innerText = `Your score is ${result} out of 5`
-  } else {
-    let result = 0;
-    score.innerText = `Your score is ${result} out of 5`
-  }
-  finalResult.push(results)
+//calculating the score 
+function calculateScore() {
+      score++;
+      yourScore.innerText = `Your score is ${score} out of 5`
+   if (score === 5) {
+      yourScore.innerText = `Your final score is ${score} out of 5`
+      canAnswer = false
+   }
 }
 
+//Creates the prompt for the random dog breed 
 function setRandomAnswer() {
   answer = breeds[Math.floor(Math.random()* breeds.length)];
   const prompt = document.createElement('div');
@@ -61,11 +72,17 @@ function setRandomAnswer() {
   thePrompt.append(prompt);
 }
 
+//Tells user if they are correct/incorrect 
 function giveFeedback(isCorrect) {
   const feedback = document.createElement('div');
   const message = isCorrect ? 'CORRECT' : 'INCORRECT'
-  feedback.innerText = `That is ${message}`;
-  thePrompt.append(feedback)
+  if (isCorrect) {
+    calculateScore()
+    feedback.innerText = `That is ${message}`;
+    thePrompt.append(feedback)
+  } else {
+    tryAgain.innerHTML = "Sorry, wrong answer! Click the Play button again";
+  }
 }
 
 button.addEventListener('click', dogImg);
