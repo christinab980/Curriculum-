@@ -23,7 +23,7 @@ const dogImg = async() => {
       output.append(dog);
       list.push(dogImgUrl);
   }
-    return list
+  return list
 }
 
 //creating a question about the breeds to the viewer and then stating if it is right/wrong 
