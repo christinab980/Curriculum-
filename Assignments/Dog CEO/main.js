@@ -1,14 +1,18 @@
-const button = document.getElementById('dogButton');
+const fetchUrl = "https://dog.ceo/api/breeds/image/random";
 const output = document.getElementById('output');
+const playButton = document.getElementById('dogButton');
 const thePrompt = document.getElementById('question');
-const yourScore = document.getElementById('your-score');
-const fetchUrl = "https://dog.ceo/api/breeds/image/random"
 const tryAgain = document.getElementById('try-again');
+const yourScore = document.getElementById('your-score');
 
 let canAnswer = true;
-let breeds = [];
+let hidden = false;
+
 let answer = '';
+let breeds = [];
 let finalResult = [];
+
+let count = 0;
 let score = 0;
 
 output.addEventListener('click', handleSelection)
@@ -28,6 +32,7 @@ const dogImg = async() => {
     thePrompt.innerHTML = ''; 
     breeds = [];
     canAnswer = true;
+    tryAgain.innerHTML = "";
 
     for(i = 0; i<4; i++) {
       const div = document.createElement('div');
@@ -54,16 +59,6 @@ function handleSelection(e) {
   } 
 }
 
-//calculating the score 
-function calculateScore() {
-      score++;
-      yourScore.innerText = `Your score is ${score} out of 5`
-   if (score === 5) {
-      yourScore.innerText = `Your final score is ${score} out of 5`
-      canAnswer = false
-   }
-}
-
 //Creates the prompt for the random dog breed 
 function setRandomAnswer() {
   answer = breeds[Math.floor(Math.random()* breeds.length)];
@@ -82,7 +77,38 @@ function giveFeedback(isCorrect) {
     thePrompt.append(feedback)
   } else {
     tryAgain.innerHTML = "Sorry, wrong answer! Click the Play button again";
+    yourScore.innerText = `Your score is ${score} out of 5`
   }
 }
 
-button.addEventListener('click', dogImg);
+//calculating the score 
+function calculateScore() { 
+    score++;
+    yourScore.innerText = `Your score is ${score} out of 5`
+}
+//ending the game after 5 clicks and reseting the game
+function endGame() {
+  count++;
+  if (count === 5) {
+    yourScore.innerText = `Your score is ${score} out of 5! Try again by hitting the Reset button!`
+    hidePlayButton()
+  }
+}
+//hiding the play button
+function hidePlayButton() {
+  hidden = !hidden;
+  if (hidden) {
+    document.getElementById('dogButton').style.visibility = 'hidden';
+  } else {
+    document.getElementById('dogButton').style.visibility = 'visable';
+  }
+}
+
+function resetPlayButton() {
+  hidden = true;
+}
+
+playButton.addEventListener('click', () => {
+  dogImg()
+  endGame()
+});
