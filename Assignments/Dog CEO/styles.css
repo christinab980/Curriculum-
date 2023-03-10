@@ -1,17 +1,25 @@
 * {
   margin: 0;
+  padding: 0
+}
+body, html {
+  height: 100%;
 }
 
 header, footer {
   background-color: lavender;
-  padding: 20px;
+  padding: 20px 0;
+}
+
+header {
+  margin-bottom: 50px;
+  text-align: left;
+  font-size: 1rem;
+  color:
 }
 
 footer {
   margin-top: 50px;
-}
-body, html {
-  height: 100%;
 }
 
 .container {
@@ -21,7 +29,7 @@ body, html {
     margin:15px;
     justify-content: center;
     align-items: center;
-    height: 90%;
+    flex:1;
   }
   
   button {
@@ -32,7 +40,7 @@ body, html {
     background-color: lavender;
     color: blueviolet;
     border: 0;
-    margin-top: 20px;
+    margin-top: 5px;
   }
   
   button:hover {
@@ -78,4 +86,30 @@ body, html {
 
   .wrap {
   padding: 30px;
+  }
+
+  .flex-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 40em) {
+    h2 {
+      margin:10px;
+      text-align: center;
+    }
+    .output {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 10px;
+      margin-top: 20px;
+    }
+    img {
+      height: 150px;
+      width: 200px;
+    }
+    button {
+      margin: 0;
+    }
   }

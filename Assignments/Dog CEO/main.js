@@ -86,14 +86,16 @@ function calculateScore() {
     score++;
     yourScore.innerText = `Your score is ${score} out of 5`
 }
+
 //ending the game after 5 clicks and reseting the game
 function endGame() {
   count++;
-  if (count === 5) {
+  if (count === 6) {
     yourScore.innerText = `Your score is ${score} out of 5! Try again by hitting the Reset button!`
     hidePlayButton()
   }
 }
+
 //hiding the play button
 function hidePlayButton() {
   hidden = !hidden;
@@ -102,10 +104,6 @@ function hidePlayButton() {
   } else {
     document.getElementById('dogButton').style.visibility = 'visable';
   }
-}
-
-function resetPlayButton() {
-  hidden = true;
 }
 
 playButton.addEventListener('click', () => {
