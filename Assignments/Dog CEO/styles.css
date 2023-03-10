@@ -2,114 +2,124 @@
   margin: 0;
   padding: 0
 }
+
 body, html {
   height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 header, footer {
   background-color: lavender;
   padding: 20px 0;
+  color: rebeccapurple;
 }
 
 header {
-  margin-bottom: 50px;
-  text-align: left;
-  font-size: 1rem;
-  color:
+  margin-bottom: 20px;
+  font-size: 1.2rem; 
+  font-weight: 700;
+  padding: 20px;
 }
 
 footer {
   margin-top: 50px;
+  font-size: 1rem;
+  padding: 20px;
+}
+
+button {
+  height: 50px;
+  width: 100px;
+  font-size: 1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: lavender;
+  color: blueviolet;
+  border: 0;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: blueviolet;
+  color: lavender;
+}
+
+img {
+  height: 200px;
+  width: 250px;
 }
 
 .container {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display: flex;
-    flex-direction: column;
-    margin:15px;
-    justify-content: center;
-    align-items: center;
-    flex:1;
-  }
-  
-  button {
-    height: 50px;
-    width: 100px;
-    font-size: 1rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: lavender;
-    color: blueviolet;
-    border: 0;
-    margin-top: 5px;
-  }
-  
-  button:hover {
-    background-color: blueviolet;
-    color: lavender;
-  }
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  margin:15px;
+  justify-content: center;
+  align-items: center;
+  flex:1;
+}
 
-  img {
-    height: 200px;
-    width: 250px;
-  }
+.output {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
 
+.output img {
+  border: 5px solid blueviolet;
+  border-radius: 20px;
+}
+
+.output img:hover {
+  border: 5px solid palevioletred;
+}
+
+.prompt {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.question div {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.wrap {
+  padding: 30px;
+}
+
+.your-score {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rebeccapurple;
+  text-align: center;
+}
+
+.question {
+  font-size: 1rem;
+  margin: 10px;
+}
+
+@media (max-width: 40em) {
+  h2 {
+    margin:10px;
+    text-align: center;
+  }
   .output {
     display: flex;
     flex-wrap: wrap;
     column-gap: 10px;
     margin-top: 20px;
   }
-
-  p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
+  img {
+    height: 150px;
+    width: 200px;
   }
-
-  .prompt {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
+  button {
+    margin: 0;
   }
-
-  .question div {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .output img {
-    border: 5px solid blueviolet;
-    border-radius: 20px;
-  }
-
-  .output img:hover {
-    border: 5px solid palevioletred;
-  }
-
-  .wrap {
-  padding: 30px;
-  }
-
-  .flex-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media (max-width: 40em) {
-    h2 {
-      margin:10px;
-      text-align: center;
-    }
-    .output {
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 10px;
-      margin-top: 20px;
-    }
-    img {
-      height: 150px;
-      width: 200px;
-    }
-    button {
-      margin: 0;
-    }
   }
