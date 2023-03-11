@@ -1,12 +1,13 @@
-.progess {
+.progress {
   column-gap: 12px;
   display: flex;
 }
 
-.progess div {
+.progress div {
   background-color: cornflowerblue;
-  height: 20px;
-  flex: 1;
+  display: flex;
+  width: 100%;
+  padding: 10px
 }
 
 .progress div.active {
@@ -18,7 +19,7 @@ main {
 }
 
 button {
-  padding:10px;
+  padding: 10px;
   border: 0;
   color: white;
 }
