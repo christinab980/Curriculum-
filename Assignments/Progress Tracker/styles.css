@@ -1,0 +1,23 @@
+.progess {
+  column-gap: 12px;
+  display: flex;
+}
+
+.progess div {
+  background-color: cornflowerblue;
+  height: 20px;
+  flex: 1;
+}
+
+.progress div.active {
+  background-color: crimson;
+}
+
+main {
+  text-align: center;
+}
+
+.view {
+  font-size: 2.5rem;
+  margin: 30px 0;
+}
