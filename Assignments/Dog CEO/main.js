@@ -1,6 +1,7 @@
 const fetchUrl = "https://dog.ceo/api/breeds/image/random";
 const output = document.getElementById('output');
 const playButton = document.getElementById('dogButton');
+const roundCount = document.getElementById('round-count');
 const thePrompt = document.getElementById('question');
 const tryAgain = document.getElementById('try-again');
 const yourScore = document.getElementById('your-score');
@@ -33,6 +34,9 @@ const dogImg = async() => {
     breeds = [];
     canAnswer = true;
     tryAgain.innerHTML = "";
+    playButton.innerText = "Next";
+    playButton.setAttribute("disabled", true);
+    countingRound();
 
     for(i = 0; i<4; i++) {
       const div = document.createElement('div');
@@ -44,12 +48,21 @@ const dogImg = async() => {
       dog.setAttribute('data-breed', breed)
       div.append(dog);
       output.append(div); 
+  } 
+      setRandomAnswer()
+}
+
+//counting the rounds so the user knows what question they are on. 
+function countingRound() {
+  if (count >= 0) {
+    roundCount.innerText = `Round ${count + 1}`
   }
-  setRandomAnswer();
 }
 
 //eventlistener function - handles whether or not the user can answer and getting the correct anwswer 
 function handleSelection(e) {
+  playButton.removeAttribute("disabled");
+  count++
   if (canAnswer) {
     canAnswer = false;
     const breed = e.target.getAttribute('data-breed');
@@ -73,10 +86,10 @@ function giveFeedback(isCorrect) {
   const message = isCorrect ? 'CORRECT' : 'INCORRECT'
   if (isCorrect) {
     calculateScore()
-    feedback.innerText = `That is ${message}`;
+    feedback.innerText = `That is ${message}!`;
     thePrompt.append(feedback)
   } else {
-    tryAgain.innerHTML = "Sorry, wrong answer! Click the Play button again";
+    tryAgain.innerHTML = "Sorry, wrong answer! Click Next to continue!";
     yourScore.innerText = `Your score is ${score} out of 5`
   }
 }
@@ -89,10 +102,12 @@ function calculateScore() {
 
 //ending the game after 5 clicks and reseting the game
 function endGame() {
-  count++;
-  if (count === 6) {
+  if (count === 5) {
     yourScore.innerText = `Your score is ${score} out of 5! Try again by hitting the Reset button!`
     hidePlayButton()
+    output.innerHTML = "";
+    tryAgain.innerHTML = "";
+    thePrompt.innerHTML = "";
   }
 }
 
@@ -107,6 +122,7 @@ function hidePlayButton() {
 }
 
 playButton.addEventListener('click', () => {
-  dogImg()
-  endGame()
+  if (count <5) {
+    dogImg()}
+    endGame()
 });

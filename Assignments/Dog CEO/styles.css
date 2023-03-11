@@ -47,6 +47,11 @@ button:hover {
   color: lavender;
 }
 
+button:disabled {
+  background-color: lightgray;
+  color: white;
+}
+
 img {
   height: 200px;
   width: 250px;
@@ -100,8 +105,19 @@ img {
 }
 
 .question {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin: 10px;
+}
+
+.round {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #3d1f5e;
+  margin-bottom: 10px;
+  
+}
+.try-again {
+  text-align: center;
 }
 
 @media (max-width: 40em) {
