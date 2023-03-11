@@ -5,29 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlackJack Take 2</title>
-    <link rel="stylesheet" href="/BlackJack/styles.css">
+    <link rel="stylesheet" href="/Assignments/BlackJack/styles.css">
 </head>
 <body>
     <div class="container">
         <h2> Dealer: <span id="dealer-sum"></span> </h2>
         <div class="dealers-table">
             <div id="dealer-cards" class="dealer-cards"> 
-                <img id='hidden' src="/BlackJack/Deck/BACK.png" alt="">
+            <div id="hidden" class = "hidden"> </div>
             </div>
         </div>
+
         <h2> Player: <span id="your-sum"> </span></h2>
             <div class="players-table">
         <div id="your-cards" class="your-cards"> </div>
         </div>
+
         <div class="buttons">
             <button class="deal" id="deal"> Deal </button>
             <button class="hit" id="hit">Hit</button>
             <button class="stay" id="stay">Stay</button>
             <button type="button" onClick="window.location.reload();">Play Again</button>
         </div>
+        
         <p id="results"> </p>
     </div>
 </body>
 
-<script src="/BlackJack/main.js"> </script>
+<script src="/Assignments/BlackJack/main.js"> </script>
 </html>

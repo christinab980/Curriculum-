@@ -1,4 +1,6 @@
 const dealButton = document.getElementById('deal');
+const hiddenCard = document.getElementById('hidden')
+
 let dealerSum = 0;
 let yourSum = 0;
 
@@ -10,6 +12,7 @@ let deck;
 
 let canHit = true;
 
+//loading the page builds the deck and shuffles the deck
 window.onload = function () {
     buildDeck();
     shuffleDeck();
@@ -20,6 +23,7 @@ dealButton.addEventListener("click", function(){
     }
 )
 
+//function to build the deck
 function buildDeck () {
     let values = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
     let types = ["C", "D", "H", "S"];
@@ -32,6 +36,7 @@ function buildDeck () {
     }
 }
 
+//function to shuffle the deck
 function shuffleDeck() {
     for (let i = 0; i < deck.length; i++) {
         let j = Math.floor(Math.random() * deck.length);
@@ -41,10 +46,19 @@ function shuffleDeck() {
     }
 }
 
+//creating a dealers first hidden card
+function dealerHiddenCard() {
+    const firstCard = document.createElement('img');
+    firstCard.src = "/Assignments/BlackJack/Deck/BACK.png";
+    hiddenCard.append(firstCard)
+}
+
+//starting the game - dealing the cards in the right order and counting the scores
 function startGame() {
     hidden = deck.pop();
     dealerSum += getValue(hidden); 
     dealerAceCount += checkAce(hidden);
+    dealerHiddenCard();
 
     while (dealerSum < 17) {
         let cardImg = document.createElement("img");
@@ -64,12 +78,13 @@ function startGame() {
         yourAceCount += checkAce(card);
         document.getElementById('your-cards').append(cardImg); 
     }
-    console.log(yourSum)
+    // console.log(yourSum)
 
     document.getElementById('hit').addEventListener("click", hit);
     document.getElementById('stay').addEventListener("click", stay);  
 }
 
+//function for the hit button
 function hit() {
     if (!canHit) {
         return;
@@ -88,6 +103,7 @@ function hit() {
 
 }
 
+//function for the stay button - creating the end messages
 function stay() {
     dealerSum = reduceAce(dealerSum, dealerAceCount);
     yourSum = reduceAce(yourSum, yourAceCount);
@@ -112,7 +128,6 @@ function stay() {
     document.getElementById('dealer-sum').innerText = dealerSum;
     document.getElementById('your-sum').innerText = yourSum;
     document.getElementById('results').innerText = message; 
-
 }
 
 function reduceAce(playerSum, playerAceCount) {

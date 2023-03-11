@@ -8,11 +8,14 @@ body {
     max-width: calc(100% - 20px);
     border: 8px solid #07301c;
     border-radius: 20px;
-    background-image: url('/BlackJack/Deck/blackjacktable.jpg');
+    background-image: url('/Assignments/BlackJack/Deck/blackjacktable.jpg');
     margin: 0 auto;
     color: white;
     padding: 30px;
 
+}
+.dealer-cards {
+    display: flex;
 }
 .dealer-cards img, .your-cards img {
     height: 120px;
