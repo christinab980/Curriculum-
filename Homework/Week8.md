@@ -3,5 +3,5 @@
 
 | Assignment | Grade |
 |------------|:-----:| 
-| Dog CEO 4 | 6.5 |
+| Dog CEO 4 | 7 |
 
