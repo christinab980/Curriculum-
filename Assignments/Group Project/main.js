@@ -12,4 +12,3 @@ fetch('https://the-cocktail-db.p.rapidapi.com/randomselection.php', options)
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
 
-  
