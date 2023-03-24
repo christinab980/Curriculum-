@@ -4,5 +4,6 @@
     "editor.tabSize": 2,
     "prettier.enable": true,
     "prettier.useEditorConfig": false,
-    "prettier.configPath": ".prettierrc.json" 
+    "prettier.configPath": ".prettierrc.json",
+    "liveServer.settings.port": 5501
 }

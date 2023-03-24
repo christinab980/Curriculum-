@@ -5,6 +5,7 @@ const progress = document.getElementById('progress');
 let position = 0;
 
 const handleNav = e => {
+  console.log(e);
   const nav = e.target.getAttribute('data-nav');
   const isForward = nav === 'forward';
   if (isForward) {
