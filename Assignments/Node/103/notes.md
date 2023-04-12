@@ -1,6 +1,10 @@
 # NodeJS 103
 ## Node is JavaScript used outside of a browser 
 
+
+### What is node?
+Node is javascript outside of the browser 
+
 ### Node Environments 
 - desktop applications
 - mobile applications
