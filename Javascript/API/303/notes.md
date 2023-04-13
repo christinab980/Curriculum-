@@ -16,3 +16,5 @@ to create new data
 
 **`PUT`**
 to update data by overwriting everything in the data set
+
+NOTE: *`PATCH`* and *`PUT`* are similar but our practice will concentrate on PUT 
