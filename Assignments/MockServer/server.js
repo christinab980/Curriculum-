@@ -2,7 +2,7 @@ const express = require("express");
 
 const server = express();
 
-server.get("/mvp", (req, res) => {
+server.get("/mvps", (req, res) => {
   res.json ({
     message: [
         {
@@ -346,6 +346,12 @@ server.get("/mvp", (req, res) => {
   );
 
 })
+
+server.get("/mvp/:year", (req, res) => {
+  const {year} = req.params;
+  const targetYear = mvps.find(mvp => mvp.year === year);
+  res.json(targetYear)
+});
 
 server.get("*", (req, res) => 
   res.json({
