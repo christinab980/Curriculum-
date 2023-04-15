@@ -1,8 +1,10 @@
-const searchButton = document.getElementById("search-button");
+const searchButton = document.getElementById('search-button')
 
 async function getData() {
-  const data = await fetch('') 
-  .then(response => response.json())
-  .catch(error => console.err(err))
+    const data = await fetch('http://localhost:8080/mvps').then((response) =>
+        response.json()
+    )
+    console.log(data)
 }
-console.log(data)
+
+getData()

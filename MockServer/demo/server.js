@@ -1,4 +1,6 @@
 const express = require("express");
+const cors = require("cors")
+
 const mvps = [{
   "year": "2022",
   "player": "Nikola Jokic",
@@ -335,8 +337,10 @@ const mvps = [{
   "team": "Boston Celtics"
 }
 ]
+let corsPolicy = {host:"http://127.0.0.1:5501/:8080"}
 
 const server = express();
+server.use(cors(corsPolicy));
 
 server.get("/mvps", (req, res) => {
   res.json ({mvps});
