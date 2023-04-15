@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+footer {
+  display: flex;
+  background-color: black;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+
+main {
+  min-height: calc(80vh - 70px);
+}
+
+.nba_logo, .footer_nba_logo {
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_nba_logo {
+  margin-left: auto;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  right: 30px;
+  top: 160px;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  background-color: black;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+input {
+  display: flex;
+  width: 90%;
+  padding: 15px;
+  padding-bottom: 2px;
+  line-height: 2;
+  border: none;
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #323232;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  outline: none;
+  margin: 10px;
+}
+
+h2 {
+  margin: 10px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding-left: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: .1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav a:hover {
+  color: #016ab6;
+}
