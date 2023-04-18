@@ -4,7 +4,6 @@ const output = document.getElementById('output')
 
 async function getData() {
   const inputData = searchInput.value
-  
   if (!isNaN(inputData * 1) ) {
     const x = await fetch(`http://localhost:8080/mvps/${inputData}`);
     const data = await x.json();
@@ -19,12 +18,44 @@ async function getData() {
   }
 }
 
-function renderResponse(data, type) {
+function renderResponse(data, y, type) {
   if (type === "year") {
-    
-  } else (type === "player") {
 
-  }
+    const div = document.createElement("div")
+    div.class = "responseDiv"
+    div.innerHTML = `Year: ${data.year}` 
+    output.append(div)
+
+    const div1 = document.createElement("div")
+    div1.class = "responseDiv"
+    div1.innerHTML = `Player: ${data.player}`
+    output.append(div1)
+
+    const div2 = document.createElement("div")
+    div2.class = "responseDiv"
+    div2.innerHTML = `Team: ${data.team}` 
+    output.append(div2)
+
+  } else { 
+    const div = document.createElement("div")
+    div.class = "responseDiv"
+    div.innerHTML = `Year: ${data.year}` 
+    output.append(div)
+
+    const div1 = document.createElement("div")
+    div1.class = "responseDiv"
+    div1.innerHTML = `Player: ${data.player}` 
+    output.append(div1)
+
+    const div2 = document.createElement("div")
+    div2.class = "responseDiv"
+    div2.innerHTML = `Team: ${data.team}` 
+    output.append(div2) }
 } 
 
-searchButton.addEventListener("click", getData)
+searchButton.addEventListener("click", () => {
+  let output = document.getElementById("output") 
+  output.innerHTML = " ";
+  output.setAttribute("style", "");
+  getData()
+});
