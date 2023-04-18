@@ -7,7 +7,11 @@
 - The request type must be POST 
 
 `req.cookies`
+- Cookies the string that defines a cookies stored in the browser 
+- The server must implement middleware to parse cookies
 
 `req.params`
+- An object of key/value pairs created by param routes and their values
 
 `req.query`
+- An object of key/value pairs created by query parameters supplied to the URL 
