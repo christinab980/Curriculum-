@@ -355,7 +355,10 @@ server.get("/mvps/:year",  (req, res) => {
 
 server.get("/mvp/:player",  (req, res) => {
   const {player} = req.params;
-  const targetPlayer = mvps.find(mvp => mvp.player === player);
+  const targetPlayer = mvps.find(mvp => {
+    return mvp.player.replaceAll(" ", "").toLowerCase() === player
+    
+  })
   res.json(targetPlayer)
 });
 
