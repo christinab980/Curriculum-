@@ -1,0 +1,21 @@
+## Setting up React
+
+-   Folder for components, sectioning, and views
+-   Create Header, Main and Footer into the sectioning folder
+-   Import those sections into the app.js like 'import Header from "./sectioning'
+-   Install React Router Dom
+-   Import it in your entry point "index.js" and wrap the application in a <BrowserRouter>
+-   Use NavLink in Header (in sectioning )
+    -   make sure to import the navLink from react-router-dom
+    -   <NavLink to='/'> Home </NavLink> but you don't have to use the / in the name routes
+    -   Change your styling to Flexbox
+-   in Main from sectioning we need:
+    -   import Routes and Route from react-router-dom
+    -   <Route path='/' element{Landing} /> Landing lives into the views folder
+-   Make a index.js in the views folder
+-   import all of the view pages "landing,about,etc' from the Routher
+-   export them in a named export
+-   inside of main.jsx we and import that index.js in views as named imports in one link and the from would just be from views.
+-   views are the nav items that can be clicked
+-   sectioning holds the pages sections 'header, main, footer'
+-   components can be used into more than one view or just one view examples a login or registation and a modal
